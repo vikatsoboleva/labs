@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    height: 200px;
+    background-color: #2b2b2b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@keyframes jumpUp {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes jumpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes moveRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes moveLeft {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-20px); }
+    100% { transform: translateX(0); }
+}
+
+.jump-up {
+    animation: jumpUp 0.5s;
+}
+
+.jump-down {
+    animation: jumpDown 0.5s;
+}
+
+.move-right {
+    animation: moveRight 0.5s;
+}
+
+.move-left {
+    animation: moveLeft 0.5s;
+}
